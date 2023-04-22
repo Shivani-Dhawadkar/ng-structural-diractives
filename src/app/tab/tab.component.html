@@ -1,0 +1,76 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"  (click)="onFrameworkChange('Angular')" [ngClass]="{active : framework === 'Angular'}"
+        >Angular</a>
+        <p></p>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"  (click)="onFrameworkChange('React')" [ngClass]="{active : framework === 'React'}">React</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link"  (click)="onFrameworkChange('Vue')" [ngClass]="{active : framework === 'Vue'}">Vue</a>
+    </li>
+</ul>
+
+<div class="tabs-body">
+    <div class="card" *ngIf="framework === 'Angular'">
+        <div class="card-body">
+            <p>
+                <strong>Angular</strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptate et assumenda dignissimos magnam similique maiores sit, sed accusamus sint, quaerat, rem recusandae necessitatibus exercitationem iusto repellat esse distinctio dicta? Quas animi, itaque quos impedit quam dolor veritatis perferendis accusamus mollitia aliquam dolore soluta nihil excepturi, ducimus ab explicabo repudiandae!  
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngIf="framework === 'React'">
+        <div class="card-body" >
+            <p>
+                <strong>React</strong>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum alias ipsa nostrum magnam voluptates doloribus veniam iste ipsum ratione illo quisquam commodi facere quia magni at suscipit quas incidunt fugiat aperiam, nemo vel? Error fugit fugiat perferendis ullam excepturi fuga voluptatem, iure impedit amet quaerat ad? Delectus, quae officia! Vitae?
+            </p>
+        </div>
+    </div>
+    <div class="card" *ngIf="framework === 'Vue'">
+        <div class="card-body">
+            <p>
+                <strong>Vue</strong>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, unde, veniam porro tempore magnam temporibus voluptatem facere amet sed adipisci nihil earum totam exercitationem. Placeat magnam ullam sint! Quam ab labore commodi expedita voluptatum cum deserunt beatae nihil, dolorem inventore optio enim fuga! Minus voluptatibus porro ducimus nobis tempore nihil.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" (click)="onFrameChange($event)" [ngClass]="{active : frame === '1'}">1</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" (click)="onFrameChange($event)" [ngClass]="{active : frame === '2'}">2</a>
+    </li>
+    <li class="nav-item">
+        <a href="javascript:;" class="nav-link" (click)="onFrameChange($event)" [ngClass]="{active : frame === '3'}">3</a>
+    </li>
+</ul>
+
+<div class="tabs-body" [ngSwitch]="frame">
+    <div class="card" *ngSwitchCase="'1'">
+        <div class="card-body" >
+            <strong>1</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quos similique temporibus odit reiciendis ex quidem, natus et perspiciatis non mollitia! Ea culpa quam atque accusamus ducimus at rem mollitia a, dolores quibusdam facere doloribus saepe fugiat quia, quos obcaecati suscipit nisi alias architecto, corporis numquam sit. Laudantium ab corporis nemo suscipit eaque tempora cum perferendis molestiae numquam, maxime voluptatum quisquam iusto a voluptate necessitatibus impedit, quae qui esse, vero omnis? Error unde ratione quae dignissimos, quos saepe architecto. Est necessitatibus eligendi, enim quod adipisci sunt quasi. Aut illum deleniti aliquid, ut dignissimos odit assumenda consequuntur id natus excepturi unde.</p>
+        </div>
+    </div>
+    <div class="card"  *ngSwitchCase="'2'">
+        <div class="card-body" >
+            <strong>2</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quos similique temporibus odit reiciendis ex quidem, natus et perspiciatis non mollitia! Ea culpa quam atque accusamus ducimus at rem mollitia a, dolores quibusdam facere doloribus saepe fugiat quia, quos obcaecati suscipit nisi alias architecto, corporis numquam sit. Laudantium ab corporis nemo suscipit eaque tempora cum perferendis molestiae numquam, maxime voluptatum quisquam iusto a voluptate necessitatibus impedit, quae qui esse, vero omnis? Error unde ratione quae dignissimos, quos saepe architecto. Est necessitatibus eligendi, enim quod adipisci sunt quasi. Aut illum deleniti aliquid, ut dignissimos odit assumenda consequuntur id natus excepturi unde.</p>
+        </div>
+    </div>
+    <div class="card"  *ngSwitchCase="'3'">
+        <div class="card-body" >
+            <strong>3</strong>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quos similique temporibus odit reiciendis ex quidem, natus et perspiciatis non mollitia! Ea culpa quam atque accusamus ducimus at rem mollitia a, dolores quibusdam facere doloribus saepe fugiat quia, quos obcaecati suscipit nisi alias architecto, corporis numquam sit. Laudantium ab corporis nemo suscipit eaque tempora cum perferendis molestiae numquam, maxime voluptatum quisquam iusto a voluptate necessitatibus impedit, quae qui esse, vero omnis? Error unde ratione quae dignissimos, quos saepe architecto. Est necessitatibus eligendi, enim quod adipisci sunt quasi. Aut illum deleniti aliquid, ut dignissimos odit assumenda consequuntur id natus excepturi unde.</p>
+        </div>
+    </div>
+</div>
+
+<hr>
